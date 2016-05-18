@@ -1,0 +1,74 @@
+/* To display error message and add css to text boxes with input errors */
+
+form.valForm label.error, label.error {
+/* remove the next line when you have trouble in IE6 with labels in list */
+	color: red;
+	font-style: italic
+}
+
+div.error { display: none; }
+/* input {	border: 1px solid black; } */
+input.checkbox { border: none }
+input:focus { border: 1px solid blue; }
+input.error { border: 2px solid red; }
+textarea.error { border: 2px solid red; }
+radio.error { 
+	border: 2px solid red; 
+	border-color: red;
+	color: red;
+	}
+RADIO.error { 
+	border: 2px solid red; 
+	border-color: red;
+	color: red;
+	}
+select.error { 
+	border: 2px solid red; 
+	border-color: red;
+	color: red;
+	}
+/* form.valForm .gray * { color: gray; } */
+
+.inputError {
+	border: 2px solid red; 
+	}
+	
+.valForm fieldset p.error label { color: red; }
+div.container {
+
+}
+div.container ol li {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+div.container { display: none }
+.container label.error {
+	display: inline;
+}
+
+form.valForm label.error {
+	display: block;
+	margin-left: 1em;
+	width: auto;
+}
+
+
+/* for modify button */
+
+
+  .button {
+
+    height: 15px;
+
+
+}
+.button img {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border: none;
+}
+.button:hover {
+    color: #8AB134;
+}  
+	

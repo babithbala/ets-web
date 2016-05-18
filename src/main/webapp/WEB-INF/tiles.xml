@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition"
+		template="/WEB-INF/pages/jsp/layout.jsp">
+		<put-attribute name="title" value="ETS" />
+		<put-attribute name="header" value="/WEB-INF/pages/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/pages/jsp/menu.jsp" />
+		<put-attribute name="body" value="" />
+<!-- 		<put-attribute name="footer" value="/WEB-INF/pages/jsp/footer.jsp" /> -->
+	</definition>
+
+	
+	<definition name="loginPage" template="/WEB-INF/pages/loginPage.jsp">
+		<put-attribute name="title" value="ETS System" />
+	</definition>
+	
+	<definition name="etsPageContent" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/jsp/prediction.jsp" />
+	</definition>
+	<definition name="home" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/jsp/home.jsp" />
+	</definition>
+	
+	<definition name="userHome" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/userHome.jsp" />
+	</definition>
+	
+	<definition name="userInfo" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/userInfoPage.jsp" />
+	</definition>
+	
+	<definition name="changePassword" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/changePassword.jsp" />
+	</definition>
+	
+	<definition name="403Page" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/403Page.jsp" />
+	</definition>
+	
+	<definition name="scheduleQuiz" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/teacher/scheduleQuiz.jsp" />
+	</definition>
+	
+	<definition name="addQuestion" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/teacher/createQuestion.jsp" />
+	</definition>
+	
+	<definition name="editQuestion" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/teacher/modifyQuestion.jsp" />
+	</definition>
+	
+	<definition name="viewAllQuestions" extends="base.definition">
+		<put-attribute name="body" value="/WEB-INF/pages/teacher/allQuestions.jsp" />
+	</definition>
+	
+
+</tiles-definitions>

@@ -1,0 +1,35 @@
+mvn install:install-file -Dfile=sqljdbc4-2.0.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4-2.0 -Dpackaging=jar
+
+
+ms sql commands
+===============
+
+CREATE TABLE USERS (
+USERNAME VARCHAR(50) NOT NULL,
+PASSWORD VARCHAR(32) NOT NULL,
+ENABLED SMALLINT,
+PRIMARY KEY (USERNAME)
+);
+CREATE TABLE AUTHORITIES (
+USERNAME VARCHAR(50) NOT NULL,
+ROLE VARCHAR(100) NOT NULL,
+CONSTRAINT FK_AUTHORITIES FOREIGN KEY (USERNAME) REFERENCES USERS (USERNAME)
+);
+
+insert into users (USERNAME, PASSWORD, ENABLED)
+values ('admin', 'admin',1 );
+insert into users (USERNAME, PASSWORD, ENABLED)
+values ('admin1', 'admin1',0 ); 
+insert into users (USERNAME, PASSWORD, ENABLED)
+values ('user', 'user', 1);
+
+insert into AUTHORITIES (USERNAME,ROLE) 
+values ('admin','ROLE_ADMIN');
+insert into AUTHORITIES (USERNAME,ROLE) 
+values ('admin','ROLE_USER');
+insert into AUTHORITIES (USERNAME,ROLE) 
+values ('admin1','ROLE_ADMIN');
+insert into AUTHORITIES (USERNAME,ROLE) 
+values ('user','ROLE_USER');
+
+==========
